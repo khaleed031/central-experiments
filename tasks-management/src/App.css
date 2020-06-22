@@ -1,0 +1,14 @@
+/* This file is to add common css used throughout the app */
+.text-D7D7D7 {
+    color: #D7D7D7 !important;
+}
+
+.contentContainer{
+    padding: 20px 20px 15px 20px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.well-white{
+    background-color: #fff;
+}

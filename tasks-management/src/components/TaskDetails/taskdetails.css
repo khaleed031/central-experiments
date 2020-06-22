@@ -1,0 +1,44 @@
+.well-white
+{
+    margin-bottom: 20px;
+    padding: 25px;
+}
+
+.link_black
+{
+    color:#000;
+    margin-right: 25px;   
+}
+
+.link_black.selected
+{
+    border-bottom: 2px solid blue;
+    color: blue;
+}
+
+.well-blue{
+    background-color: blue;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    padding-top: 5px;
+    margin-right: 10px;
+}
+
+.p_grey{
+    margin-top: 5px;
+    color: gray;
+}
+
+.well-grey{
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    padding-top: 5px;
+    margin-right: 10px;
+}

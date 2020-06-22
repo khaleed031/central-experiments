@@ -1,0 +1,119 @@
+#CentralAppContainer {
+    padding-top: 75px;
+    padding-left: 265px;
+}
+
+/* GlobalBar Start */
+
+#centralNavbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    border-radius: 0px;
+    border-radius: 0px;
+    -moz-box-shadow: 3px 3px 3px rgba(230, 230, 230, 0.349019607843137);
+    -webkit-box-shadow: 3px 3px 3px rgba(230, 230, 230, 0.349019607843137);
+    box-shadow: 3px 3px 3px rgba(230, 230, 230, 0.349019607843137);
+    z-index: 3;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.navbar-brand {
+    font-size: 1rem;
+}
+
+#navbarDropdownContainer.dropdown {
+    position: static !important;
+}
+
+#navbarDropdownContainer {
+    margin-right: 50px;
+}
+
+#navbarDropdownContainer .dropdown-menu.show {
+    transform: translate(0px, 60px) !important;
+}
+
+#navbarDropdownContainer .dropdown-menu{
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    margin-top: 0px !important;
+    width: 100% !important;    
+}
+
+.navbar-fa.home {
+    margin-left: 20px;
+}
+
+a.navbar-fa {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #d7d7d7;
+    margin: 0 7px;
+    display: inline-block;
+}
+
+a.navbar-fa .fas, a.navbar-fa .fal, a.navbar-fa .far {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    padding-bottom: 3px;
+}
+
+a.navbar-fa div {
+    font-size: 10px;
+}
+
+.choices {
+    width: 300px;
+    margin-bottom: 0px;
+}
+
+.choices__inner {
+    background-color: rgba(242, 242, 242, 1);
+    border: none;
+    min-height: 35px;
+    overflow: hidden;
+    border: none;
+    height: 35px;
+    width: 300px;
+}
+
+#navbarDropdownContainer .dropdown-toggle::after {
+    display: none;
+}
+
+/* GlobalBar End */
+
+#leftSidePanel{
+    border-width: 0px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 220px;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    -ms-overflow-y: hidden;
+    overflow-y: hidden;
+    background-color: rgba(255, 255, 255, 1);
+    background-image: none;
+    border: none;
+    border-radius: 0px;
+    -moz-box-shadow: 5px 5px 5px rgba(230, 230, 230, 0.349019607843137);
+    -webkit-box-shadow: 5px 5px 5px rgba(230, 230, 230, 0.349019607843137);
+    box-shadow: 5px 5px 5px rgba(230, 230, 230, 0.349019607843137);
+    z-index: 2;
+    padding-top: 65px;
+    padding-left: 5px;
+}
