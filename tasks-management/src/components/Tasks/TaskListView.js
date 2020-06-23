@@ -22,120 +22,57 @@ function SimpleButton(props) {
   return <button onClick={() => alert(rowData.name)}>{cellValue}</button>;
 }
 
-const data = [
-  {
-    id: 327498,
-    task: "",
-    assignee: "",
-    duedate: "",
-    status: "",
-  },
+const dataList = [
   {
     id: 327498,
     task: "Create sign-in page",
+    description: "The purpose of the sign-in page is to allow an entry page where the user is authenticated. If a",
     assignee: "Michael",
-    duedate: "Jun 17",
+    reportedby : "Acme Inc - Jane Doe",
+    priority: "Normal",
     status: "New",
+    duedate : "2020/06/19  5:00 pm"
   },
   {
     id: 23,
     task: "New Contact",
-    assignee: "",
-    duedate: "Jun 18",
+    description: "New contact have been added to allow an entry page where the user is authenticated.",
+    assignee: "Michael",
+    reportedby : "Acme Inc - Jane Doe",
+    priority: "Normal",
     status: "New",
-  },
-  {
-    id: 2342,
-    task: "List Contacts",
-    assignee: "Jane",
-    duedate: "Jun 18",
-    status: "Assess",
-  },
-  {
-    id: 123,
-    task: "Edit Contact",
-    assignee: "Jane",
-    duedate: "Jun 18",
-    status: "Assess",
-  },
-  {
-    id: 543,
-    task: "Contact Details",
-    assignee: "",
-    duedate: "Jun 18",
-    status: "New",
-  },
-  {
-    id: 23712,
-    task: "New Task",
-    assignee: "",
-    duedate: "Jun 19",
-    status: "New",
-  },
-  {
-    id: 1233,
-    task: "List Tasks",
-    assignee: "",
-    duedate: "Jun 19",
-    status: "New",
-  },
-  {
-    id: 423,
-    task: "Edit Task",
-    assignee: "",
-    duedate: "Jun 19",
-    status: "New",
-  },
-  {
-    id: 4362,
-    task: "Task Details",
-    assignee: "",
-    duedate: "Jun 19",
-    status: "New",
-  },
-  {
-    id: 235,
-    task: "Reply to task",
-    assignee: "",
-    duedate: "Jun 19",
-    status: "New",
-  },
+    duedate : "2020/06/19  5:00 pm"
+  }
 ];
 
-const ContactLink = (props) => {
-  const rowData = props.cell._cell.row.data;
-  const cellValue = props.cell._cell.value;
-  return <a href="/taskdetails">{cellValue}</a>
-};
+const listItems = dataList.map((data) =>
+  <div>
+    <div><input type="checkbox" /> {data.id} {data.task}</div>
+    <br/>
+    <p>{data.description}</p>
+    <br/>
+    <table className="table">
+        <tr>
+            <td>Assignee</td>
+            <td>Reported by</td>
+            <td>Priority</td>
+            <td>Status</td>
+            <td>Due Date</td>
+        </tr>
+        <tr>
+            <td><a href="/taskdetails">{data.assignee}</a></td>
+            <td>{data.reportedby}</td>
+            <td>{data.priority}</td>
+            <td>{data.status}</td>
+            <td>{data.duedate}</td>
+        </tr>
+    </table>
+  </div>
+  
+);
 
-class TaskGridView extends React.Component {
-  state = {
-    data: [],
-    selectedName: "",
-  };
-  ref = null;
-
-  columns = [
-    { title: "Id", field: "id", width: 150 },
-    { title: "Task", field: "task", hozAlign: "left", formatter: reactFormatter(<ContactLink />) },
-    { title: "assignee", field: "assignee" },
-    { title: "due date", field: "duedate" },
-    { title: "status", field: "status", hozAlign: "center", hozAlign: "left" },
-  ];
-
-  setData = () => {
-    this.setState({ data });
-  };
-
-  clearData = () => {
-    this.setState({ data: [] });
-  };
-
+class TaskListView extends React.Component {
   render() {
-    const options = {
-      height: 150,
-      movableRows: true,
-    };
 
     return (
       <div>
@@ -164,7 +101,12 @@ class TaskGridView extends React.Component {
                     <Button variant="outline-secondary">Search</Button>
                   </InputGroup.Append>
                 </InputGroup>
-                <br />
+              </Col>
+              <Col></Col>
+            </Form.Row>
+            <br/>
+            <Form.Row>
+                <Col>
                 <div>
                   <>
                     <Button variant="outline-primary">Incomplete Tasks</Button>{" "}
@@ -173,19 +115,14 @@ class TaskGridView extends React.Component {
                     <Button variant="link">All filters</Button>
                   </>
                 </div>
-              </Col>
-              <Col></Col>
+                </Col>
             </Form.Row>
             <br />
-            <React15Tabulator
-              ref={(ref) => (this.ref = ref)}
-              columns={this.columns}
-              data={data}
-              data-custom-attr="test-custom-attribute"
-              className="custom-css-class"
-            />
+          </Container>
+          <br />
+          <Container className="well-white">
             <br />
-            <br />
+            {listItems}
           </Container>
         </div>
       </div>
@@ -193,4 +130,4 @@ class TaskGridView extends React.Component {
   }
 }
 
-export default TaskGridView;
+export default TaskListView;

@@ -8,9 +8,14 @@ class LeftSideMenus extends React.Component
         return <div>
             <div>
             <Link to="/Home">Home</Link>
-            </div>            
+            </div>       
+            <div>
+            <Link to="/tasklistview">Task List View</Link>
+            </div>
+            <div>
             <Link to="/taskgridview">Tasks</Link>
-
+            </div>     
+     
         </div>;
     }
 }

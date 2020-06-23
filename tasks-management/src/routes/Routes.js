@@ -2,6 +2,7 @@ import React from "react";
 import Home from "../components/Home/Home";
 import Signin from "../components/SignIn/Signin";
 import ForgotPassword from "../components/ForgotPassword/ForgotPassword";
+import TaskListView from "../components/Tasks/TaskListView";
 import Taskgridview from "../components/Tasks/TaskGridView";
 import Taskdetails from "../components/TaskDetails/Taskdetails";
 import NotFound from "../components/NotFound/NotFound";
@@ -18,6 +19,9 @@ const Routes = (props) => {
       <UnauthenticatedRoute exact path="/Taskdetails">
         <Taskdetails />
       </UnauthenticatedRoute>
+      <UnauthenticatedRoute exact path="/TaskListView">
+        <TaskListView />
+      </UnauthenticatedRoute>      
       <UnauthenticatedRoute exact path="/TaskGridview">
         <Taskgridview />
       </UnauthenticatedRoute>

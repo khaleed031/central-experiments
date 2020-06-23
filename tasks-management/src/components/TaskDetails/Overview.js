@@ -7,6 +7,9 @@ const Overview = (props) => {
   return <div>
       <div>
           Tasks / 327498
+          <span className="float-right">
+              <a href="#" className="btn_cls"><img src="images/star.jpg" /></a><a href="#" className="btn_cls"><img src="images/edit.jpg" /></a><a href="#" className="btn_cls"><img src="images/ellipse-h.jpg" /></a>
+          </span>
       </div>
       <p>Create sign-in page</p>
       <div>

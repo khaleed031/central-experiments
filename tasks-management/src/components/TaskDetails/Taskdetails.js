@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button, InputGroup, FormControl, Container, Form, Col, Row } from 'react-bootstrap';
 
-
-
 import Overview from './Overview'
 import Details from './Details'
 import Replies from './Replies'
